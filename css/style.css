@@ -1,0 +1,240 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap');
+
+body {
+    background: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100% 100%;
+    font-family: 'Noto Sans Arabic', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.footer-txt-copyright {
+    color: #fff;
+    font-size: 12px;
+    font-family: Teko;
+    font-family: 'Noto Sans Arabic', 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+.text-lin {
+    font-weight: bold;
+    color: #fff;
+    font-size: 12px;
+    font-family: 'Noto Sans Arabic', 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.btn-login-fb {
+    margin: 6;
+    background: #212121;
+
+    width: 290px;
+
+    height: auto;
+
+    margin-top: 15px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    padding: 3px;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-family: 'Noto Sans Arabic', 'Helvetica Neue', Arial, sans-serif;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    text-shadow: 1px 0px rgba(0, 0, 0, 0.3);
+
+    border: 4px solid #212121;
+
+    border-radius: 50px;
+
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+
+    outline: none;
+
+    display: block;
+
+}
+
+.btn-login-fd {
+
+    background: #fff;
+
+    width: 290px;
+
+    height: auto;
+
+    margin-top: 15px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    padding: 3px;
+
+    color: #212121;
+
+    font-size: 14px;
+
+    font-family: 'Noto Sans Arabic', 'Helvetica Neue', Arial, sans-serif;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    text-shadow: 10px 0px (0, 0, 70, 0.3);
+
+    border: 4px solid #fff;
+
+    border-radius: 50px;
+
+    box-shadow: 1px 1px 15px 10px rgba(0, 0, 0, 0.1);
+
+    outline: none;
+
+    display: block;
+
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+
+    width: 300px;
+    text-align: right;
+    height: auto;
+
+    padding: 12px;
+
+    color: #000;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    font-family: 'Noto Sans Arabic', 'Helvetica Neue', Arial, sans-serif;
+
+    border: 1px solid #bdbebf;
+
+    cursor: pointer;
+
+    outline: none;
+
+}
+
+.login-form input[type="text"] {
+
+    width: 300px;
+    text-align: right;
+    height: auto;
+    border-radius: 9px;
+    padding: 6px;
+    font-family: Arial, sans-serif;
+    text-align: right;
+    border: 2px solid #E3E3E3;
+    color: #000;
+    outline: none;
+    margin-left: auto;
+
+    margin-right: auto;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    font-family: 'Noto Sans Arabic', 'Helvetica Neue', Arial, sans-serif;
+
+    border: 2px;
+    cursor: pointer;
+
+    outline: none;
+
+}
+
+.login-form input[type="text1"] {
+    margin: 6%;
+    width: 300px;
+    text-align: right;
+    height: auto;
+    border-radius: 9px;
+    padding: 6px;
+    font-family: 'Noto Sans Arabic', 'Helvetica Neue', Arial, sans-serif;
+    text-align: right;
+    border: 2px solid #E3E3E3;
+    color: #000;
+    outline: none;
+    margin-left: auto;
+
+    margin-right: auto;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    font-family: 'Noto Sans Arabic', 'Helvetica Neue', Arial, sans-serif;
+
+    border: 2px;
+    cursor: pointer;
+
+    outline: none;
+
+}
+
+.login-form input[type="password"] {
+
+    margin: 6%;
+    width: 300px;
+    text-align: right;
+    height: auto;
+    outline: none;
+    padding: 6px;
+    border-radius: 9px;
+    color: #000;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    font-family: 'Lato', sans-serif;
+    font-family: 'Noto Sans Arabic', 'Helvetica Neue', Arial, sans-serif;
+    text-align: right;
+    border: 2px solid #E3E3E3;
+    border: 2px;
+    cursor: pointer;
+    outline: none;
+}
+
+.ds {
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Noto Sans Arabic', 'Helvetica Neue', Arial, sans-serif;
+    color: #fff;
+}
+
+.img {
+    width: 80px;
+    margin-top: 50px;
+    box-shadow: 0 0 20px 1px rgba(255, 255, 255, 1);
+    /* إضاءة بيضاء قوية */
+    border-radius: 10px;
+    /* اختياري لحواف ناعمة */
+}
